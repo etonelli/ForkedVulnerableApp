@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>VulnerableApp</name>
-	<comment>Project VulnerableApp created by KSASAN.</comment>
+	<comment>Project ForkedVulnerableApp created by KSASAN, forked by Emilio Tonelli.</comment>
 	<projects>
 	</projects>
 	<buildSpec>
