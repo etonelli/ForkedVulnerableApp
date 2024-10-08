@@ -2,7 +2,13 @@
 # Build your Java project and run tests with Gradle using a Gradle wrapper script.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
-
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      echo 'Hello world'
 trigger:
 - master
 
@@ -20,3 +26,4 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'  # Replace with your JDK version
     jdkArchitectureOption: 'x64'
+
