@@ -18,7 +18,7 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.17'
+    jdkVersionOption: '1.11'
     sonarQubeRunAnalysis: false
     spotBugsAnalysis: false
 
