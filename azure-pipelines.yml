@@ -21,5 +21,9 @@ steps:
     jdkVersionOption: '1.11'
     sonarQubeRunAnalysis: false
     spotBugsAnalysis: false
-
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'VulnerableApp.jar'
+    publishLocation: 'pipeline'
 
