@@ -13,13 +13,14 @@ pool:
 steps:
 - task: Gradle@3
   inputs:
-    gradleWrapperFile: 'gradlew'  # Path to your Gradle wrapper
-    tasks: 'clean build'  # Replace with the tasks you want to run
+    gradleWrapperFile: 'gradlew'
+    tasks: 'clean build'
     publishJUnitResults: true
-    testResultsFiles: '**/TEST-*.xml'  # Updated pattern for test result files
+    testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.17'  # Replace with your JDK version
-    jdkArchitectureOption: 'x64'
+    jdkVersionOption: '1.17'
     gradleOptions: 
+    sonarQubeRunAnalysis: false
+    spotBugsAnalysis: false
 
 
