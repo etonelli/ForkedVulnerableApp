@@ -21,7 +21,5 @@ steps:
     jdkVersionOption: '1.17'  # Replace with your JDK version
     jdkArchitectureOption: 'x64'
     gradleOptions: 
-    sonarQubeRunAnalysis: false
-    spotBugsAnalysis: false
 
 
