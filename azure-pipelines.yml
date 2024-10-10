@@ -14,12 +14,12 @@ steps:
 - task: Gradle@3
   inputs:
     gradleWrapperFile: './gradle/wrapper/gradle-wrapper.jar'
+    workingDirectory: 'gradle/wrapper'
     tasks: 'clean build'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.17'
-    gradleOptions: 
     sonarQubeRunAnalysis: false
     spotBugsAnalysis: false
 
