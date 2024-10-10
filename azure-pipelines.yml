@@ -13,8 +13,7 @@ pool:
 steps:
 - task: Gradle@3
   inputs:
-    gradleWrapperFile: './gradle/wrapper/gradle-wrapper.jar'
-    workingDirectory: 'gradle/wrapper'
+    gradleWrapperFile: 'gradlew'
     tasks: 'clean build'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
