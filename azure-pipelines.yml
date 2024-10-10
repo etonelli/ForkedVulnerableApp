@@ -22,18 +22,14 @@ steps:
     jdkVersionOption: '1.11'  # Replace with your JDK version
     jdkArchitectureOption: 'x64'
 
-- task: Bash@3
+- task: Gradle@3
   inputs:
-    targetType: 'inline'
-    script: |
-      # Write your commands here
-      
-      echo 'Hello world 1'
-
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your commands here
-      
-      echo 'Hello world 2'
+    gradleWrapperFile: 'gradlew'
+    tasks: 'clean build'
+    publishJUnitResults: true
+    testResultsFiles: '**/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.17'
+    gradleOptions: 
+    sonarQubeRunAnalysis: false
+    spotBugsAnalysis: false
