@@ -21,6 +21,16 @@ steps:
     jdkVersionOption: '1.11'
     sonarQubeRunAnalysis: false
     spotBugsAnalysis: false
+
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      curl \
+       -H 'Authorization: Bearer <YOUR_BEARER_TOKEN>' \
+       -X POST https://tfh19986.sprint.apps.dynatracelabs.com/platform/automation/v1/workflows/77a1c3be-680d-4c55-a61b-de36e38dc782/run
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Pipeline.Workspace)'
